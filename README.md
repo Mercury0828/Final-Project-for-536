@@ -62,6 +62,12 @@ We use `trojanzoo` in our codes. TrojanZoo is a high-level library for machine l
         nn.Sequential([conv1, bn1, relu, maxpool,
                        layer1, layer2, layer3, layer4,
                        avgpool])
+                       
+        # LSTM
+        nn.LSTM(input_size=16*4*4, hidden_size=96,
+            num_layers=1, batch_first=True)
+            
+        # WReN
     ```
 2. Classifier: 2 layer MLP with dropout.
     ```python3
@@ -72,14 +78,6 @@ We use `trojanzoo` in our codes. TrojanZoo is a high-level library for machine l
             nn.Linear(512, 8)
         ])
     ```
- 3. MLP:
-    ```python3
-        nn.Sequential([
-            nn.Linear(96, 96),
-            nn.ReLU(),
-            nn.Dropout(),
-            nn.Linear(96, 8)
-        ])
 
 ## Training
 
