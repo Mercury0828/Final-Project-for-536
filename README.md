@@ -81,7 +81,7 @@ We use `trojanzoo` in our codes. TrojanZoo is a high-level library for machine l
 
 ## Training
 
-1. Optimizer: SGD(lr=0.1, momentum=0.9, weight_decay=5e-4)
+1. Optimizer: Adam(lr=kwargs['lr'], betas=(0.9, 0.999), eps=1e-8)
 2. lr scheduler: CosineAnnealingLR
 3. loss: CrossEntropy
-4. Score: top1-accuracy, top5-accuracy and loss
+4. Score: top1 accuracy and loss
