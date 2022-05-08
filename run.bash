@@ -11,5 +11,5 @@ args=$1
 
 for model in "${models[@]}"; do
     echo $model
-    python main.py --dataset i_raven --validate_interval 1 --verbose 1 --batch_size 100 --lr 1e-3 --epochs 300 --tensorboard --model $model --configure $1 
+    python main.py --dataset i_raven --validate_interval 1 --verbose 1 --batch_size 100 --lr 1e-4 --epochs 300 --tensorboard --model $model --configure $1 
 done
